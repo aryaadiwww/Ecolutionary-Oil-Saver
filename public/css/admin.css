@@ -1,0 +1,431 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.swal2-toast .swal2-title {
+    color: #545454;
+    background-color: #fff;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #0D163A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.toggle {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    cursor: pointer;
+}
+
+.profile {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    cursor: default;
+    border-radius: 50%;
+}
+
+.profile>img {
+    width: 40px;
+    height: auto;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 250px;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    transform: translateX(-300px);
+    transition: transform 0.5s ease;
+}
+
+.navbar {
+    padding: 0.5rem 0 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+}
+
+.navbar img {
+    max-width: 120px;
+    width: 100%;
+    height: auto;
+    margin-left: -5px;
+    margin-bottom: 40px;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.navbar-nav a {
+    text-align: left;
+    color: #333;
+    font-weight: 400;
+}
+
+.navbar-nav a:hover {
+    color: #f9ba33;
+}
+
+.navbar-nav a.active {
+    color: #f9ba33;
+    font-weight: 600;
+}
+
+.icon {
+    margin-right: 15px;
+    color: #f9ba33;
+}
+
+/* Garis Container */
+.container1 .border-div{
+    width: 100%;
+    border: 1px solid #fff;
+    margin-bottom: -10px;
+}
+.container2 .border-div{
+    width: 100%;
+    border: 1px solid #fff;
+    margin-bottom: -25px;
+}
+.container3 .border-div,
+.container4 .border-div {
+    width: 100%;
+    border: 1px solid #333;
+    margin-bottom: -10px;
+}
+/* Garis Container */
+
+.content {
+    display: grid;
+    grid-template-areas:
+        "h1 h1"
+        "container1 container2"
+        "container3 container4";
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    max-width: 900px;
+    width: 100%;
+    padding: 10px 20px 20px;
+    background-color: #fff;
+    border-radius: 14px;
+}
+
+/* 1, 2, 3, 4 */
+.content .container1,
+.content .container2,
+.content .container3,
+.content .container4 {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 14px;
+    height: 200px;
+}
+
+.content>h1{
+    grid-area: h1;
+    font-size: 24px;
+    font-weight: 700;
+    color: #0D163A;
+}
+
+.content .container1 {
+    grid-area: container1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #292D5F;
+    color: #fff;
+}
+
+.content .container2 {
+    grid-area: container2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #292D5F;
+    color: #fff;
+}
+
+.content .container3 {
+    grid-area: container3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    color: #292D5F;
+}
+.content .container4 {
+    grid-area: container4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    color: #292D5F;
+}
+
+.container1>h1,
+.container2>h1,
+.container3>h1,
+.container4>h1 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.container1>label,
+.container2>label,
+.container3>label,
+.container4>label{
+    margin-top: -20px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+label>span{
+    color: #f9ba33;
+}
+
+.container1 .bottom,
+.container2 .bottom,
+.container3 .bottom,
+.container4 .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container1 .bottom>p,
+.container1 .bottom>a,
+.container2 .bottom>p,
+.container2 .bottom>a {
+    font-size: 28px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.container3 .bottom>p,
+.container3 .bottom>a,
+.container4 .bottom>p,
+.container4 .bottom>a {
+    font-size: 28px;
+    font-weight: 600;
+    color: #292D5F;
+}
+/* 1, 2, 3, 4 */
+
+/* Container 2 */
+.container2 .total {
+    display: grid;
+    grid-template-areas:
+        "dna h1"
+        "dna label";
+    grid-template-columns: 1fr 4fr;
+    width: 260px;
+}
+
+.total .dna {
+    color: #3BBB6e;
+    grid-area: dna;
+    font-size: 45px;
+}
+
+.total>h1{
+    grid-area: h1;
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: -7px;
+}
+.total>label{
+    grid-area: label;
+    font-size: 13px;
+}
+/* Container 2 */
+
+/* Admin Member */
+
+.container {
+    background-color: #fff;
+    border-radius: 9px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    background-color: #292D5F;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+thead {
+    background-color: #f9f9f9;
+}
+
+thead th {
+    padding: 15px 20px;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody td {
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.button {
+    background-color: #3E497A;
+    color: #fff;
+    width: 60px;
+    height: 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #2c3768;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background: #eeeeee;
+}
+
+.pagination li {
+    list-style: none;
+    margin: 0 0.5rem;
+}
+
+.pagination li a,
+.pagination li span {
+    padding: 0.5rem 0.75rem;
+    color: #333;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.pagination li a:hover {
+    background-color: #f5f5f5;
+}
+
+.pagination .active span {
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #007bff;
+}
+
+/* Admin Member */
+
+/* Admin Rewards */
+.req {
+    color: #292D5F;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.form-reward {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.btn-approve {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 7px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-approve:hover {
+    background-color: #218838;
+}
+
+/* Styling untuk tombol reject */
+.btn-reject {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 7px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-reject:hover {
+    background-color: #c82333;
+}
+/* Admin Rewards */
+
+/* Admin Report */
+h3 {
+    color: #333;
+    text-align: center;
+}
+
+.data {
+    padding: 50px 30px 20px;
+}
+
+.value>h3{
+    color: #292D5F;
+    font-weight: 400;
+}
+.value .percentage{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+/* Admin Report */
